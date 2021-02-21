@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
+import App from './app/App';
+import * as serviceWorkerRegistration from './helpers/serviceWorker/serviceWorkerRegistration';
+import reportWebVitals from './helpers/reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>

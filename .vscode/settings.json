@@ -1,0 +1,18 @@
+{
+    "eslint.format.enable": true,
+    "eslint.packageManager": "yarn",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "eslint.validate": [
+        "html",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+}

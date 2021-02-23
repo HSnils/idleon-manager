@@ -1,9 +1,11 @@
 import { ClassType } from '../store/characters/types';
 
+export const JOURNEYMAN_SPRITE_URL = 'https://static.miraheze.org/idleonwiki/a/a4/Journeyman.png';
+
 export const getClassSpriteUrl = (classType: ClassType): string => {
   switch (classType) {
     case ClassType.JOURNEYMAN:
-      return 'https://static.miraheze.org/idleonwiki/a/a4/Journeyman.png';
+      return JOURNEYMAN_SPRITE_URL;
     case ClassType.WARRIOR:
       return 'https://static.miraheze.org/idleonwiki/9/96/Warrior2.png';
     case ClassType.BARBARIAN:

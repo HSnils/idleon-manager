@@ -6,6 +6,7 @@ import {
 import packageJson from '../../package.json';
 
 export const OldApp = lazy(() => import('../pages/example/oldapp'));
+export const Landingpage = lazy(() => import('../pages/Landingpage'));
 
 const NoMatch = () => <Redirect to="/" />;
 
@@ -19,7 +20,7 @@ const Router = (): React.ReactElement => (
         path="/"
         render={() => (
           <Suspense fallback={<LoadingFallback />}>
-            <div>At home</div>
+            <Landingpage />
           </Suspense>
         )}
       />

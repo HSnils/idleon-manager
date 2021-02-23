@@ -5,8 +5,8 @@ import {
 
 import packageJson from '../../package.json';
 
-export const OldApp = lazy(() => import('../pages/example/oldapp'));
 export const Landingpage = lazy(() => import('../pages/Landingpage'));
+export const CharacterUpdate = lazy(() => import('../pages/CharacterUpdate'));
 
 const NoMatch = () => <Redirect to="/" />;
 
@@ -26,10 +26,19 @@ const Router = (): React.ReactElement => (
       />
       <Route
         exact
-        path="/old"
+        path="/add"
         render={() => (
           <Suspense fallback={<LoadingFallback />}>
-            <OldApp />
+            <CharacterUpdate />
+          </Suspense>
+        )}
+      />
+      <Route
+        exact
+        path="/edit/:characterName"
+        render={() => (
+          <Suspense fallback={<LoadingFallback />}>
+            <CharacterUpdate />
           </Suspense>
         )}
       />

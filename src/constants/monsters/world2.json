@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Sand Pot",
+    "accuracyNeeded": "187,5",
+    "defenceNeeded": "61,5",
+    "mobDamage": "70"
+  },
+  {
+    "name": "Mimic",
+    "accuracyNeeded": "217,5",
+    "defenceNeeded": "77,8",
+    "mobDamage": "85"
+  },
+  {
+    "name": "Crabcake",
+    "accuracyNeeded": "270",
+    "defenceNeeded": "85,6",
+    "mobDamage": "92"
+  },
+  {
+    "name": "Mafiosos",
+    "accuracyNeeded": "360",
+    "defenceNeeded": "111,8",
+    "mobDamage": "115"
+  },
+  {
+    "name": "Sand Castle",
+    "accuracyNeeded": "405",
+    "defenceNeeded": "123,4",
+    "mobDamage": "125"
+  },
+  {
+    "name": "Pincermin",
+    "accuracyNeeded": "450",
+    "defenceNeeded": "141,1",
+    "mobDamage": "140"
+  },
+  {
+    "name": "Mashed Potato",
+    "accuracyNeeded": "495",
+    "defenceNeeded": "165,1",
+    "mobDamage": "160"
+  },
+  {
+    "name": "Tyson",
+    "accuracyNeeded": "675",
+    "defenceNeeded": "238,6",
+    "mobDamage": "220"
+  },
+  {
+    "name": "Moonmoon",
+    "accuracyNeeded": "750",
+    "defenceNeeded": "263,5",
+    "mobDamage": "240"
+  },
+  {
+    "name": "Sand Giant",
+    "accuracyNeeded": "825",
+    "defenceNeeded": "288,6",
+    "mobDamage": "260"
+  },
+  {
+    "name": "Snelbie",
+    "accuracyNeeded": "975",
+    "defenceNeeded": "339",
+    "mobDamage": "300"
+  }
+]

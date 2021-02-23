@@ -1,0 +1,116 @@
+[
+  {
+    "name": "Green Mushroom",
+    "accuracyNeeded": "1,5",
+    "defenceNeeded": "0,2",
+    "mobDamage": "1"
+  },
+  {
+    "name": "Frog",
+    "accuracyNeeded": "3",
+    "defenceNeeded": "2,1",
+    "mobDamage": "5"
+  },
+  {
+    "name": "Bored Bean",
+    "accuracyNeeded": "6",
+    "defenceNeeded": "8,2",
+    "mobDamage": "14"
+  },
+  {
+    "name": "Slime",
+    "accuracyNeeded": "13,5",
+    "defenceNeeded": "10,5",
+    "mobDamage": "17"
+  },
+  {
+    "name": "Baby Boa",
+    "accuracyNeeded": "27",
+    "defenceNeeded": "14,6",
+    "mobDamage": "22"
+  },
+  {
+    "name": "Carrot Man",
+    "accuracyNeeded": "45",
+    "defenceNeeded": "18",
+    "mobDamage": "26"
+  },
+  {
+    "name": "Red Mushroom",
+    "accuracyNeeded": "37,5",
+    "defenceNeeded": "21,6",
+    "mobDamage": "30"
+  },
+  {
+    "name": "Glublin",
+    "accuracyNeeded": "78",
+    "defenceNeeded": "26,2",
+    "mobDamage": "35"
+  },
+  {
+    "name": "Wode Board",
+    "accuracyNeeded": "105",
+    "defenceNeeded": "30,9",
+    "mobDamage": "40"
+  },
+  {
+    "name": "Giga Frog",
+    "accuracyNeeded": "180",
+    "defenceNeeded": "50,9",
+    "mobDamage": "60"
+  },
+  {
+    "name": "Walking Stick",
+    "accuracyNeeded": "525",
+    "defenceNeeded": "50,9",
+    "mobDamage": "20"
+  },
+  {
+    "name": "Nutto (Acorn)",
+    "accuracyNeeded": "937,5",
+    "defenceNeeded": "123,4",
+    "mobDamage": "40"
+  },
+  {
+    "name": "Poop",
+    "accuracyNeeded": "180",
+    "defenceNeeded": "276",
+    "mobDamage": "250"
+  },
+  {
+    "name": "Rat",
+    "accuracyNeeded": "300",
+    "defenceNeeded": "370,6",
+    "mobDamage": "325"
+  },
+  {
+    "name": "Baba Yaga",
+    "accuracyNeeded": "450",
+    "defenceNeeded": "466",
+    "mobDamage": "400"
+  },
+  {
+    "name": "Dr. Defecaus",
+    "accuracyNeeded": "750",
+    "defenceNeeded": "1223,3",
+    "mobDamage": "1000"
+  },
+  {
+    "name": "Amarok (Normal)",
+    "accuracyNeeded": "180",
+    "defenceNeeded": "213,9",
+    "mobDamage": "200"
+  },
+  {
+    "name": "Amarok (Chaotic)",
+    "accuracyNeeded": "2625",
+    "defenceNeeded": "3564",
+    "mobDamage": "3000"
+  },
+  {
+    "name": "Amarok (Nightmare)",
+    "accuracyNeeded": "",
+    "defenceNeeded": "",
+    "mobDamage": ""
+  }
+]

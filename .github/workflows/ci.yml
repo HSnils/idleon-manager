@@ -70,7 +70,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Configure git user
-        run: |
+        runs: |
           git config --global user.email "hrsnils@gmail.com"
           git config --global user.name "HSnils"
 

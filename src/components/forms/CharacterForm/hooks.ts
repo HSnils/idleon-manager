@@ -4,6 +4,7 @@ import { Character } from '../../../store/characters/types';
 
 import { actions } from '../../../store/characters/slice';
 import { CharacterFormFields } from '.';
+import { CharacterWithSlot } from './types';
 
 export const useAddOrUpdateCharacter = (
   character?: Character,
@@ -21,7 +22,8 @@ export const useAddOrUpdateCharacter = (
   };
 };
 
-const createNewCharacter = (formValues: CharacterFormFields):Character => ({
+const createNewCharacter = (formValues: CharacterFormFields): CharacterWithSlot => ({
+  slot: formValues.slot,
   name: formValues.name,
   level: formValues.level,
   defence: formValues.defence,

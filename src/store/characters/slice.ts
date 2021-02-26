@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { CharacterWithSlot } from '../../components/forms/CharacterForm/types';
 import { Character, CharactersState } from './types';
 
 const getInitialValues = (): CharactersState => {
@@ -19,16 +20,21 @@ const charactersSlice = createSlice({
     setCharacters: (state, action: PayloadAction<Character[]>) => {
       state.characters = action.payload;
     },
-    addCharacter: (state, action: PayloadAction<Character>) => {
-      state.characters.push(action.payload);
+    addCharacter: (state, action: PayloadAction<CharacterWithSlot>) => {
+      state.characters.splice(action.payload.slot - 1, 0, action.payload);
       updateLocalStorage(state.characters);
     },
-    updateCharacter: (state, action: PayloadAction<Character>) => {
+    updateCharacter: (state, action: PayloadAction<CharacterWithSlot>) => {
       const updatedCharacter = action.payload;
-      const index = state.characters.findIndex(
+      const indexOfCharacter = state.characters.findIndex(
         (character) => character.name === updatedCharacter.name,
       );
-      state.characters[index] = updatedCharacter;
+      state.characters[indexOfCharacter] = updatedCharacter;
+
+      const orderHasChanged = indexOfCharacter + 1 !== updatedCharacter.slot;
+      if (orderHasChanged) {
+        changeOrderOfCharacter(state, indexOfCharacter, updatedCharacter);
+      }
       updateLocalStorage(state.characters);
     },
     removeCharacter: (state, action: PayloadAction<Character>) => {
@@ -45,3 +51,12 @@ const updateLocalStorage = (characters: Character[]) => localStorage.setItem('ch
 
 export const { actions } = charactersSlice;
 export default charactersSlice.reducer;
+
+function changeOrderOfCharacter(
+  state: CharactersState,
+  index: number,
+  updatedCharacter: CharacterWithSlot,
+) {
+  state.characters.splice(index, 1);
+  state.characters.splice(updatedCharacter.slot - 1, 0, updatedCharacter);
+}

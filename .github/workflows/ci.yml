@@ -69,6 +69,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Configure git user
+        runs: |
+          git config --global user.email "hrsnils@gmail.com"
+          git config --global user.name "HSnils"
+
       - name: Setup node
         uses: actions/setup-node@v1
         with:
@@ -89,11 +94,5 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Build
-        run: yarn build
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.0.0
-        with:
-          branch: gh-pages
-          folder: build
+      - name: Deploy
+        run: yarn deploy

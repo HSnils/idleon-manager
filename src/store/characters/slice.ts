@@ -1,34 +1,16 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Character, CharactersState, ClassType } from './types';
+import { Character, CharactersState } from './types';
 
-const initialState: CharactersState = {
-  characters: [{
-    name: 'Snils',
-    level: 52,
-    classType: ClassType.SHAMAN,
-    defence: 102,
-    accuracy: 372,
-  },
-  {
-    name: 'Valterian',
-    level: 53,
-    classType: ClassType.BARBARIAN,
-    defence: 128,
-    accuracy: 415,
-  }, {
-    name: 'Repins',
-    level: 54,
-    classType: ClassType.BOWMAN,
-    defence: 87,
-    accuracy: 343,
-  }, {
-    name: 'Graphite',
-    level: 45,
-    classType: ClassType.SQUIRE,
-    defence: 65,
-    accuracy: 198,
-  }],
+const getInitialValues = (): CharactersState => {
+  const initialState: CharactersState = { characters: [] };
+  const charactersFromStorage: string | null = localStorage.getItem('characters');
+  if (charactersFromStorage) {
+    initialState.characters = JSON.parse(charactersFromStorage) as Character[];
+  }
+  return initialState;
 };
+
+const initialState: CharactersState = getInitialValues();
 
 const charactersSlice = createSlice({
   name: 'characters',
@@ -39,6 +21,7 @@ const charactersSlice = createSlice({
     },
     addCharacter: (state, action: PayloadAction<Character>) => {
       state.characters.push(action.payload);
+      updateLocalStorage(state.characters);
     },
     updateCharacter: (state, action: PayloadAction<Character>) => {
       const updatedCharacter = action.payload;
@@ -46,9 +29,19 @@ const charactersSlice = createSlice({
         (character) => character.name === updatedCharacter.name,
       );
       state.characters[index] = updatedCharacter;
+      updateLocalStorage(state.characters);
+    },
+    removeCharacter: (state, action: PayloadAction<Character>) => {
+      const updatedCharactersList = state.characters
+        .filter((character) => character.name !== action.payload.name);
+
+      state.characters = updatedCharactersList;
+      updateLocalStorage(updatedCharactersList);
     },
   },
 });
+
+const updateLocalStorage = (characters: Character[]) => localStorage.setItem('characters', JSON.stringify(characters));
 
 export const { actions } = charactersSlice;
 export default charactersSlice.reducer;

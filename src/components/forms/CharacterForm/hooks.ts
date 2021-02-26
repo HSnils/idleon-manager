@@ -29,4 +29,16 @@ const createNewCharacter = (formValues: CharacterFormFields):Character => ({
   classType: formValues.classType,
 });
 
-export default { useAddOrUpdateCharacter };
+export const useDeleteCharacter = (character?: Character)
+  : ((event: any) => void) => {
+  const dispatch = useDispatch();
+  const history = useHistory();
+  return () => {
+    if (character) {
+      dispatch(actions.removeCharacter(character));
+      history.push('/');
+    }
+  };
+};
+
+export default { useAddOrUpdateCharacter, useDeleteCharacter };
